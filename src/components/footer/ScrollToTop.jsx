@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import arrow from "../../assets/arrow.png";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +31,8 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       style={{ display: isVisible ? "block" : "none" }}
     >
-      <img src={arrow} alt="" />
+      <div class="scroll-to-top">↑</div>
+      <div style={{fontSize:"16px"}}>Back to Top</div>
     </div>
   );
 };

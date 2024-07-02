@@ -14,7 +14,14 @@ const Footer = () => {
         </div>
         <div className="footer__content__menus">
           <div className="footer__content__menu">
-            <a href="https://developer.themoviedb.org/docs/getting-started">
+            <a href="https://react.dev/learn" target="_blank" rel="noreferrer">
+              Learn React
+            </a>
+            <a
+              href="https://developer.themoviedb.org/docs/getting-started"
+              target="_blank"
+              rel="noreferrer"
+            >
               More about API
             </a>
           </div>
