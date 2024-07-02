@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import arrow from "../../assets/arrow.png";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +32,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       style={{ display: isVisible ? "block" : "none" }}
     >
-      <i className="fas fa-arrow-up"></i>
+      <img src={arrow} alt="" />
     </div>
   );
 };
