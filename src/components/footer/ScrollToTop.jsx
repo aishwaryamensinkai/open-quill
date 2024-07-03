@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       onClick={scrollToTop}
       style={{ display: isVisible ? "block" : "none" }}
     >
-      <div class="scroll-to-top">↑</div>
+      <div className="scroll-to-top">↑</div>
       <div style={{fontSize:"16px"}}>Back to Top</div>
     </div>
   );

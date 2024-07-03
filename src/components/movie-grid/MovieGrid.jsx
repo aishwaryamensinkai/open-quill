@@ -11,7 +11,6 @@ import tmdbApi, { category, movieType, tvType } from "../../api/tmdbApi";
 
 const MovieGrid = (props) => {
   const [items, setItems] = useState([]);
-
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
 
@@ -20,7 +19,17 @@ const MovieGrid = (props) => {
   useEffect(() => {
     const getList = async () => {
       let response = null;
-      if (keyword === undefined) {
+      if (props.category === category.watchlist) {
+        const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        const watchlistDetails = await Promise.all(
+          watchlist.map(async (id) => {
+            const res = await tmdbApi.detail("movie", id, { params: {} });
+            return res;
+          })
+        );
+        setItems(watchlistDetails);
+        setTotalPage(1); // Assuming watchlist is loaded all at once
+      } else if (keyword === undefined) {
         const params = {};
         switch (props.category) {
           case category.movie:
@@ -37,15 +46,20 @@ const MovieGrid = (props) => {
         };
         response = await tmdbApi.search(props.category, { params });
       }
-      setItems(response.results);
-      setTotalPage(response.total_pages);
+      if (response) {
+        setItems(response.results);
+        setTotalPage(response.total_pages);
+      }
     };
     getList();
   }, [props.category, keyword]);
 
   const loadMore = async () => {
     let response = null;
-    if (keyword === undefined) {
+    if (props.category === category.watchlist) {
+      // No pagination for watchlist
+      return;
+    } else if (keyword === undefined) {
       const params = {
         page: page + 1,
       };
