@@ -47,7 +47,7 @@ const Detail = () => {
   };
 
   if (error) {
-    return <div>Error loading movie details. Please try again later.</div>;
+    return <div className="errorLoading">Error loading movie details. Please try again later.</div>;
   }
 
   return (

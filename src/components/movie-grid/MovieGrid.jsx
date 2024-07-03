@@ -117,7 +117,7 @@ const MovieSearch = (props) => {
 
   useEffect(() => {
     const enterEvent = (e) => {
-      e.preventDefault();
+      e.preventDefault();                                                                                                                                       
       if (e.keyCode === 13) {
         goToSearch();
       }
