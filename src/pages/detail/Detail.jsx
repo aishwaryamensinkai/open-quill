@@ -84,7 +84,7 @@ const Detail = () => {
                   ))}
               </div>
               <p className="overview">{item.overview}</p>
-              <div className="watchlist-btn">
+              <div className="abtns">
                 <button onClick={handleWatchlist}>
                   {isInWatchlist ? "Remove from Watchlist" : "Add to Watchlist"}
                 </button>

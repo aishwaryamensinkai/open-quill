@@ -1,6 +1,40 @@
 @use "../../scss/" as *;
-.errorLoading{
-  top:10%
+
+.abtns {
+  display: flex;
+  justify-content: lefts;
+  margin-top: 20px;
+
+  button {
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #ff4500;
+      transform: scale(1.05);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+    }
+
+    &:active {
+      background-color: #e63900;
+      transform: scale(0.95);
+    }
+  }
+}
+
+.errorLoading {
+  top: 10%;
 }
 
 .banner {
