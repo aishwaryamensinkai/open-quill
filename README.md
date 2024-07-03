@@ -30,7 +30,7 @@ To run this application locally, follow these steps:
 2. Navigate to the project directory:
 
     ```bash
-    cd react-movie
+    cd tmdb-Movies-main
     ```
 
 3. Install the packages using the command:
@@ -52,6 +52,8 @@ The project structure is organized as follows:
 - **public/**: Contains the public assets and HTML file.
 - **src/**: Contains the source code for the React application.
   - **components/**: Reusable components used across the application.
+  - **config/**: Router component used in the application.
+  - **assets/**: Contains the images used across the application.
   - **pages/**: Individual page components (Home, MovieDetails).
   - **App.js**: Main application component.
   - **index.js**: Entry point for the React application.
