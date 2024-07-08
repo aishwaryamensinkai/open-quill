@@ -70,7 +70,7 @@ Contributions are welcome! If you'd like to add new features, improve existing o
 
 ## License
 
-This project is licensed under the Apache License.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
